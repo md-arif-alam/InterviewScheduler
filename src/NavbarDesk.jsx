@@ -82,6 +82,11 @@ const NavbarDesk = () => {
                 </Link>
               </li>
               <li className="cursor pointer group">
+                <Link to="interviewerManagement" className="flex h-[72px] items-center gap-[2px] hover:text-red-700 font-semibold">
+                  Add Interviewer
+                </Link>
+              </li>
+              <li className="cursor pointer group">
                 <Link to="aboutme" className="flex h-[72px] items-center gap-[2px] hover:text-red-700 font-semibold">
                   About
                 </Link>

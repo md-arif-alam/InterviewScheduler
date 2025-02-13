@@ -7,7 +7,7 @@ import img from './images/InterviewImage2.jpg'
 
 const InterviewForm = ({ isEdit }) => {
   const useInterviewContext = () => useContext(InterviewContext);
-  const { addInterview, updateInterview, interviews } = useInterviewContext();
+  const { addInterview, updateInterview, interviews, interviewers } = useInterviewContext();
   const navigate = useNavigate();
   const { id } = useParams();
   const existingInterview = isEdit ? interviews[parseInt(id, 10)] : {};
@@ -61,7 +61,7 @@ const InterviewForm = ({ isEdit }) => {
             className="w-full p-2 border rounded"
             required
           />
-          <input
+          {/* <input
             type="text"
             name="interviewer"
             placeholder="Interviewer Name"
@@ -69,7 +69,20 @@ const InterviewForm = ({ isEdit }) => {
             onChange={handleChange}
             className="w-full p-2 border rounded"
             required
-          />
+          /> */}
+          <select
+            name="interviewer"
+            placeholder="Interviewer Name"
+            value={formData.interviewer}
+            onChange={handleChange}
+            className="w-full p-2 border rounded"
+            required
+          >
+            <option value="">Select Interviewer</option>
+            {interviewers.map((intr, index) => (
+              <option key={index} value={intr.name}>{intr.name} - {intr.position}</option>
+            ))}
+          </select>
           <input
             type="date"
             name="date"

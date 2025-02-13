@@ -26,6 +26,12 @@ const NavbarMob = ({ showMenu, setShowMenu }) => {
               </Link>
             </li>
             <li onClick={() => setShowMenu(false)} className="hover:text-red-700 gap-[2px]">
+              <Link to="interviewerManagement" className="mb-1 inline-block">
+                Add Interviewer
+              </Link>
+            </li>
+
+            <li onClick={() => setShowMenu(false)} className="hover:text-red-700 gap-[2px]">
               <Link to="aboutme" className="mb-1 inline-block">
                 About Me
               </Link>

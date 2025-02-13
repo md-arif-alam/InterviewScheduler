@@ -23,6 +23,9 @@ const InterviewProvider = ({ children }) => {
   const [interviews, setInterviews] = useState(
     JSON.parse(localStorage.getItem("interviews")) || []
   );
+  const [interviewers, setInterviewers] = useState(
+    JSON.parse(localStorage.getItem("interviewers")) || []
+  );
 
   const addInterview = (newInterview) => {
     newInterview.dateTimeIST = convertToIST(newInterview.date, newInterview.timeSlot, newInterview.timeZone);
@@ -82,9 +85,22 @@ const InterviewProvider = ({ children }) => {
     return moment.tz(`${date} ${time}`, "YYYY-MM-DD HH:mm", timeZone).tz("Asia/Kolkata").format();
   };
 
+  const addInterviewer = (newInterviewer) => {
+    const updatedInterviewers = [...interviewers, newInterviewer];
+    setInterviewers(updatedInterviewers);
+    localStorage.setItem("interviewers", JSON.stringify(updatedInterviewers));
+    toast.success("Interviewer added successfully!");
+  };
+
+  const removeInterviewer = (index) => {
+    const updatedInterviewers = interviewers.filter((_, i) => i !== index);
+    setInterviewers(updatedInterviewers);
+    localStorage.setItem("interviewers", JSON.stringify(updatedInterviewers));
+    toast.success("Interview removed successfully!");
+  };
 
   return (
-    <InterviewContext.Provider value={{ interviews, addInterview, updateInterview, deleteInterview, setInterviews, sendMockEmail }}>
+    <InterviewContext.Provider value={{ interviews, addInterview, updateInterview, deleteInterview, setInterviews, sendMockEmail, interviewers, addInterviewer, removeInterviewer }}>
       {children}
     </InterviewContext.Provider>
   );
