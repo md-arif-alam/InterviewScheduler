@@ -15,7 +15,7 @@ const InterviewManagement = () => {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto bg-white shadow-md rounded-lg">
+    <div className="p-6 max-w-4xl mx-auto bg-slate-200 shadow-2xl rounded-lg">
       <ToastContainer />
       <h2 className="text-xl font-bold mb-4">Manage Interviewers</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -32,7 +32,7 @@ const InterviewManagement = () => {
           <option value="HR">HR</option>
           <option value="Behavioral">Behavioral</option>
         </select>
-        <button type="submit" className="p-2 bg-blue-500 text-white rounded">Add Interviewer</button>
+        <button type="submit" className="bg-red-700 text-gray-200 px-4 py-2 rounded-lg shadow-2xl mb-4 inline-block">Add Interviewer</button>
       </form>
 
       <div className="relative overflow-x-auto shadow-2xl sm:rounded-lg">
