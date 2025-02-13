@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.aboutSection {
+  height: 90vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: rgb(185, 51, 51);
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  position: fixed;
+  color: rgb(164, 164, 163);
+}
+
+.aboutSectionGradient {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(78, 81, 255),
+    rgb(74, 137, 189)
+  );
+  color: rgb(164, 164, 163);
+}
+
+.aboutSectionContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: rgb(164, 164, 163);
+  background-color: rgb(71, 71, 71);
+  width: 80vw;
+  height: 80vh;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.192);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutSectionContainer > h1 {
+  font: 400 3vmax "Roboto";
+  color: rgb(164, 164, 163);
+  margin: 1vmax;
+}
+
+.aboutSectionContainer > div {
+  display: flex;
+  width: 100%;
+  color: rgb(164, 164, 163);
+}
+
+.aboutSectionContainer > div > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vmax;
+  padding-bottom: 2vmax;
+  box-sizing: border-box;
+  color: rgb(164, 164, 163);
+}
+
+.aboutSectionContainer > div > div > p {
+  color: rgba(173, 173, 173, 0.978);
+  font: 100 2vmax "Roboto";
+}
+
+.aboutSectionContainer > div > div > span {
+  font: 100 1vmax "Roboto";
+  color:rgba(173, 173, 173, 0.978);
+  text-align: center;
+  width: 80%;
+  color: rgb(164, 164, 163);
+}
+
+.aboutSectionContainer2 {
+  border-left: 1px solid rgba(173, 173, 173, 0.978);
+}
+
+.aboutSectionContainer2 > h2 {
+  color: rgba(173, 173, 173, 0.978);
+  font: 100 2vmax "Roboto";
+  margin: 2vmax;
+}
+
+.aboutSectionContainer2 > a > svg {
+  font-size: 4vmax;
+  color: rgb(164, 164, 163);
+}
+
+.youtubeSvgIcon {
+  color: tomato;
+}
+
+.instagramSvgIcon {
+  color: rgb(144, 81, 202);
+}
+
+@media screen and (max-width: 420px) {
+  /* aboutSectionContainer > div > div > p {
+    color: rgba(173, 173, 173, 0.978);
+
+    font: 100px;
+    line-height: 20px;
+  } */
+  .aboutSectionContainer > div {
+    display: block;
+    color: rgb(164, 164, 163);
+  }
+
+  .aboutSectionContainer > h1 {
+    color: rgb(164, 164, 163);
+    font: 400 2vmax "Roboto";
+    margin: 2vmax;
+  }
+
+
+  .aboutSectionContainer > div > div > p {
+    color: rgb(164, 164, 163);
+    font: 100 1vmax "Roboto";
+  }
+
+  .aboutSectionContainer > div > div > span {
+    color: rgb(164, 164, 163);
+    font: 100 1vmax "Roboto";
+    width: 70%;
+  }
+
+  .aboutSectionContainer2 {
+    color: rgb(164, 164, 163);
+    border-left: none;
+  }
+
+  .aboutSectionContainer2 > h2 {
+    color: rgb(164, 164, 163);
+    font: 100 1vmax "Roboto";
+    margin: 1vmax;
+  }
+
+  .aboutSectionContainer2 > a > svg {
+    color: rgb(164, 164, 163);
+    font-size: 1vmax;
+    /* margin: 1vmax; */
+  }
+}
+
+
